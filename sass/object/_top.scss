@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+.top {
+  padding-top: 65px;
+
+  @include overTab {
+    padding-top: 80px;
+  }
+
+  .inner {
+    margin: 0 auto;
+    max-width: 375px;
+    width: 100%;
+    @include overTab {
+      margin: 0 auto;
+      max-width: 1080px;
+      width: 100%;
+    }
+
+    .top_content {
+      width: 375px;
+      height: 230px;
+      position: relative;
+      background-image: url(/images/jessica-loaiza-DHYfjAe_eeo-unsplash.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(219, 219, 219, 0.7);
+      }
+      @include overTab {
+        width: 1080px;
+        height: 444px;
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgba(219, 219, 219, 0.7);
+        }
+      }
+
+      .top_ttl {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        color: cl(text);
+        font-size: 24px;
+        @include overTab {
+          font-size: 36px;
+          left: 20%;
+        }
+      }
+    }
+  }
+}

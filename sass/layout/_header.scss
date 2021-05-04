@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.header {
+  height: 65px;
+  position: fixed;
+  // max-width: 1080px;/* 調整 */
+  width: 100%;
+  margin: 0;
+  z-index: 5;
+  @include overTab {
+    height: 80px;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header_ttl_wrap {
+      width: 119px;
+      @include overTab {
+        width: 200px;
+      }
+      // height: 80px;
+
+      .header_ttl {
+        padding: 18px 15px;
+        font-size: 24px;
+        color: cl(white);
+        font-weight: bold;
+        background: cl(primary);
+        height: 65px;
+        @include overTab {
+          padding: 18px 34px 19px 33px;
+          font-size: 36px;
+          height: 80px;
+        }
+      }
+    }
+
+    .header_nav_wrap {
+
+      .header_nav {
+
+        .header_list {
+          display: none;
+          @include overTab {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .header_item {  
+            &:not(:first-of-type) {
+              margin-left: 24px;
+            }
+            .header_link {
+              color: cl(text);
+              &:hover {
+                color: cl(primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

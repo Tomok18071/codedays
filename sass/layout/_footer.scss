@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+
+.footer {
+  width: 375px;
+  margin: 0 auto;
+  background: cl(grey);
+  @include overTab {
+    width: 100%;
+  }
+  .copyright {
+    text-align: center;
+    color: cl(white);
+    padding: 12px 0;
+    @include overTab {
+      padding: 22px 0;
+    }
+  }
+}

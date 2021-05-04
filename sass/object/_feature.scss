@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+
+.feature {
+  width: 100%;
+  @include overTab {
+
+  }
+  .inner {
+    margin: 0 auto;
+    max-width: 375px;
+    width: 100%;
+    @include overTab {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section_ttl {
+      margin-bottom: 65px;
+      @include overTab {
+        margin-bottom: 135px;
+      }
+    }
+    .feature_content {
+
+      .cmn_content {
+        display: flex;
+        flex-direction: column-reverse;
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column-reverse;
+        @include overTab {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &.even {
+          margin-bottom: 0;
+          @include overTab {
+            flex-direction: row;
+            margin-bottom: 100px;
+          }
+        }
+        &.odd {
+
+          @include overTab {
+            flex-direction: row-reverse;
+
+          }
+        }
+        .feature_desc {
+          width: 100%;
+          background: cl(lightgrey);
+          padding: 30px 50px;
+          text-align: center;
+          color: cl(grey);
+          @include overTab {
+            padding: 60px 86px;
+            height: 300px;
+            width: 460px;
+          }
+          .feature_desc_top {
+            margin-bottom: 25px;
+
+            .feature_desc_ttl {
+              color: cl(grey);
+              font-size: 18px;
+              @include overTab {
+                font-size: 36px;
+              }
+            }
+            .feature_desc_summary {
+
+            }
+          }
+          .feature_desc_bottom {
+            .cmn_desc {
+              font-size: 14px;
+              @include overTab {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .feature_img_wrap {
+          .feature_img {
+            width: 100%;
+            height: 180px;
+            @include overTab {
+              width: 540px;
+              height: 395px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

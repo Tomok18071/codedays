@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.access {
+  margin-bottom: 0;
+  width: 100%;
+
+  @include overTab {
+    margin-bottom: 100px;
+  }
+
+  .inner {
+
+    .access_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .access_desc {
+        padding: 50px 90px 30px;
+        background: cl(lightgrey);
+        width: 100%;
+
+        @include overTab {
+          padding: 74px 135px 56px;
+          width: 460px;
+          height: 347px;
+        }
+
+        .access_desc_ttl {
+          font-size: 24px;
+          color: cl(white);
+          background: cl(primary);
+          width: 142px;
+          height: 57px;
+          padding: 12px 23px;
+          margin-bottom: 30px;
+
+          @include overTab {}
+        }
+
+        .access_desc_address {
+          line-height: 2;
+          margin-bottom: 30px;
+        }
+
+        .access_desc_btn {
+
+          a.access_desc_link {
+            display: block;
+            color: cl(grey);
+            width: 157px;
+            height: 48px;
+            // margin: 0 auto;
+            border: 1px solid cl(grey);
+            background: cl(white);
+            padding: 10px 20px;
+            position: relative;
+
+            &::before {
+              content: ">";
+              color: cl(grey);
+              position: absolute;
+              top: 50%;
+              right: 5%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+
+      .access_img_wrap {
+
+        .access_img {
+          width: 345px;
+          height: 236px;
+          margin: 0 auto;
+
+          @include overTab {
+            width: 540px;
+            height: 280px;
+          }
+        }
+      }      
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .access_content {
+    flex-direction: column-reverse;
+  }
+}
